@@ -93,4 +93,6 @@ título: los primero que aparece después de:
 falla con los títulos en inglés. Posible solución: usar palabras en inglés, pero eso cargaría un montón el procesamiento
 
 hacer que el get_nombres reciba los nombres de los profesores y los separe, así la coma entre ellos no supone problema. No se puede separar nombres por coma porque hay alumnos que ponen apellido, nombre. Poner en constante profesores sus nombres en formato apellido nombre
+
+conclusión: la importancia de exigir un único formato
     
