@@ -32,6 +32,7 @@ def comparar_archivo(path, model):
 
 def calcular_plagio(tp, model):
     distancia = 0
+    descontado = 0
     coincidencias = []
     for file in model.tps:
         if file["filename"] != tp.nombre:
@@ -39,8 +40,10 @@ def calcular_plagio(tp, model):
             distancia += d
             for sent in copied:
                 coincidencias.append({"frase_coincidente": sent, "filename": file["filename"]})
+        else:
+            descontado += 1
 
-    return (1 - (distancia/(len(model.tps) - 1))), coincidencias
+    return (1 - (distancia/(len(model.tps) - descontado))), coincidencias
 
 def mostrar_data(analisis):
     print(f"Nombre del archivo: {analisis.nombre}")
